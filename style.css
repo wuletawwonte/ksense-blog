@@ -1,10 +1,44 @@
 :root {
     --primary: #3b49e7;
     --bg: #e6ebf6;
+    --white: #fff;
+    --black: #000;
+
+    --header-shadow: 1px 1px 3px #bebebe,
+                    -1px -1px 3px #ffffff;
+    --content-shadow: 1px 1px 1px #bebebe,
+                    -1px -1px 1px #ffffff;
 }
 
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: bl
+}
+
+header {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: var(--header-shadow);
+    background-color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding: 0.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--white);
+    box-shadow: var(--content-shadow);
 }
