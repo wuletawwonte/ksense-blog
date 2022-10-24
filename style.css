@@ -1,0 +1,98 @@
+:root {
+  --primary: #3b49e7;
+  --primary-accent: #4f59d1;
+  --bg: #e6ebf6;
+  --white: #fff;
+  --black: #000;
+  --header-shadow:
+    1px 1px 3px #bebebe,
+    -1px -1px 3px #fff;
+  --content-shadow:
+    1px 1px 1px #bebebe,
+    -1px -1px 1px #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  padding: 5px 10px;
+}
+
+header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: var(--header-shadow);
+  background-color: var(--white);
+  margin-bottom: 1rem;
+}
+
+summary {
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+details p {
+  padding: 0.5rem;
+  background-color: var(--bg);
+}
+
+.container {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: var(--white);
+  box-shadow: var(--content-shadow);
+}
+
+.logo {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: var(--primary-accent);
+}
+
+.action {
+  text-align: center;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.posts li {
+  margin-bottom: 1rem;
+}
