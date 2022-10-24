@@ -98,8 +98,8 @@ details p {
 }
 
 @media screen and (min-width: 480px) {
-    .container {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
