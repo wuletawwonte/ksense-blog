@@ -1,0 +1,1 @@
+# Ksense blog - Takehome challenge
