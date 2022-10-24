@@ -44,18 +44,18 @@ window.addEventListener("load", () => {
                             const postsList = `
                             <h2>Posts</h2>
                             <ul class="posts">
-                                <li>
-                                    ${
-                                        posts.map(post => {
-                                            return `
-                                                <details>
-                                                    <summary>${post.title}</summary>
-                                                    <p>${post.body}</p>
-                                                </details>    
-                                            `
-                                        }).join('')
-                                    }
-                                </li>
+                                ${
+                                    posts.map(post => {
+                                        return `
+                                        <li>
+                                            <details>
+                                                <summary>${post.title}</summary>
+                                                <p>${post.body}</p>
+                                            </details>  
+                                        </li>  
+                                        `
+                                    }).join('')
+                                }
                             </ul>
                             `;
                             parentNode.innerHTML = postsList;

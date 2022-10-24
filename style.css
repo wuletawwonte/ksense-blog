@@ -47,6 +47,17 @@ header {
     margin-bottom: 1rem;
 }
 
+summary {
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+details p {
+    padding: 0.5rem;
+    background-color: var(--bg);
+}
+
 .container {
     padding: 0.5rem;
     margin-left: 1rem;
@@ -76,4 +87,9 @@ header {
 
 .posts {
     list-style: none;
+    padding: 0;
+}
+
+.posts li {
+    margin-bottom: 1rem;
 }
