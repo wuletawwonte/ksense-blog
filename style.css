@@ -1,0 +1,10 @@
+:root {
+    --primary: #3b49e7;
+    --bg: #e6ebf6;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
