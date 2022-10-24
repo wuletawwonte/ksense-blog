@@ -37,8 +37,8 @@ header {
 
 .container {
     padding: 0.5rem;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 1rem;
+    margin-right: 1rem;
     background-color: var(--white);
     box-shadow: var(--content-shadow);
 }
