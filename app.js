@@ -2,9 +2,13 @@ window.addEventListener("load", () => {
 
     const BASE_URL = 'https://jsonplaceholder.typicode.com/';
     const app = document.getElementById("app");
-    const usersTable = document.createElement("table");
 
-    fetch(BASE_URL + "users")
+    loadUsers(BASE_URL + "users", app);
+
+    function loadUsers(url, parentNode) {
+        const usersTable = document.createElement("table");
+
+        fetch(url)
         .then(response => response.json())
         .then(data => {
             usersTable.innerHTML = `
@@ -21,13 +25,44 @@ window.addEventListener("load", () => {
                         return `
                             <tr>
                                 <td>${user.name}</td>
-                                <td><button>Posts</button></td>
+                                <td class="action"><button class="btn" data-id=${user.id}>Posts</button></td>
                             </tr>
                         `;
                     }).join('')   
                 }
             `;
-            app.appendChild(usersTable);
-        })
+            parentNode.appendChild(usersTable);
+
+            const btns = document.querySelectorAll('.btn');
+
+            btns.forEach(btn => {
+                btn.addEventListener('click', e => {
+                    const userId = e.target.dataset.id;
+                    fetch(`${url}/${userId}/posts`)
+                        .then(response => response.json())
+                        .then(posts => {
+                            const postsList = `
+                            <h2>Posts</h2>
+                            <ul class="posts">
+                                <li>
+                                    ${
+                                        posts.map(post => {
+                                            return `
+                                                <details>
+                                                    <summary>${post.title}</summary>
+                                                    <p>${post.body}</p>
+                                                </details>    
+                                            `
+                                        }).join('')
+                                    }
+                                </li>
+                            </ul>
+                            `;
+                            parentNode.innerHTML = postsList;
+                        });
+                })
+            })
+        });
+    }
 
 });
